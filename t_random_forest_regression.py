@@ -5,11 +5,11 @@ from sklearn.metrics import roc_auc_score
 import time
 import pandas as pd
 
-X = pd.read_csv('titanic_train.csv')
+X = pd.read_csv('csv/titanic_train.csv')
 y = X.pop('Survived')
 
 # Describe the data
-#print X.describe()
+print X.describe()
 
 # Input missing Age values with the mean value
 X['Age'].fillna(X.Age.mean(), inplace=True)
